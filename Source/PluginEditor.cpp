@@ -943,7 +943,10 @@ void DuckwerkEditor::paint (juce::Graphics& g)
     g.fillAll (col::bg);
     g.setColour (col::text);
     g.setFont (font (19.0f, true));
-    g.drawText ("DUCKWERK", kMargin, 12, 130, 32, juce::Justification::centredLeft);
+    g.drawText ("DUCKWERK", kMargin, 8, 130, 28, juce::Justification::centredLeft);
+    g.setColour (col::dim);
+    g.setFont (font (9.0f, false));
+    g.drawText ("v" DUCKWERK_VERSION, kMargin + 1, 32, 130, 12, juce::Justification::centredLeft);
 
     g.setColour (col::dim);
     g.setFont (font (10.0f, true));
